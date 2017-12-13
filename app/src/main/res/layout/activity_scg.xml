@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.carl.testproject.SCGActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[Descibes what calculation]"
+        android:id="@+id/textView4"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Target Conc %:"
+        android:id="@+id/targetConcLabel"
+        android:layout_marginTop="32dp"
+        android:textColor="#000000"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/targetConc"
+        android:textColor="#000000"
+        android:layout_alignBottom="@+id/targetConcLabel"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/textView4"
+        android:layout_toEndOf="@+id/textView4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Actual Conc %:"
+        android:id="@+id/actualConcLabel"
+        android:layout_marginTop="34dp"
+        android:textColor="#000000"
+        android:layout_below="@+id/targetConc"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/actualConc"
+        android:textColor="#000000"
+        android:layout_alignBottom="@+id/actualConcLabel"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/targetConc"
+        android:layout_alignStart="@+id/targetConc" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Tank Volume:"
+        android:id="@+id/tankVolumeLabel"
+        android:layout_marginTop="35dp"
+        android:textColor="#000000"
+        android:layout_below="@+id/actualConc"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/tankVolume"
+        android:textColor="#000000"
+        android:layout_alignBottom="@+id/tankVolumeLabel"
+        android:layout_alignRight="@+id/otConc"
+        android:layout_alignEnd="@+id/otConc"
+        android:layout_alignLeft="@+id/actualConc"
+        android:layout_alignStart="@+id/actualConc" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="OT Conc %:"
+        android:id="@+id/otConcLabel"
+        android:textColor="#000000"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/otConc"
+        android:textColor="#000000"
+        android:layout_above="@+id/resultButton"
+        android:layout_alignLeft="@+id/actualConc"
+        android:layout_alignStart="@+id/actualConc" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:id="@+id/resultButton"
+        android:clickable="true"
+        android:layout_gravity="center"
+        android:layout_marginRight="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@+id/otConcLabel"
+        android:layout_alignRight="@+id/errorLabel"
+        android:layout_alignEnd="@+id/errorLabel"
+        android:layout_marginTop="42dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Result"
+        android:id="@+id/textView10"
+        android:textColor="#000000"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/resultButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/resultText"
+        android:textColor="#000000"
+        android:layout_alignBottom="@+id/textView10"
+        android:layout_alignLeft="@+id/otConc"
+        android:layout_alignStart="@+id/otConc"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Please enter a value for the item(s) in red."
+        android:id="@+id/errorLabel"
+        android:visibility="invisible"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/textView10"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
